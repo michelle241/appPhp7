@@ -11,16 +11,15 @@
     <link rel="stylesheet" href="css/problema.css"/>
     <link href="https://fonts.googleapis.com/css?family=Rambla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <script>
+    <?php
         function solucion(){
-        var masa=6578;
-        var gravedad=9.8;
-        var densidad=masa/gravedad;
-        
-        var d=document.getElementById("resultado");
-        d.innerHTML='La densidad es: '+densidad+' kg/m3';
+        $masa=6578;
+        $gravedad=9.8;
+        $densidad=$masa/$gravedad;
+
+        return $densidad;
         }
-    </script>
+    ?>
 </head>
 <body>
     <section id="contenedor">
@@ -42,7 +41,7 @@
             masa = m = 6578 N/m**3 <br>
             densidad = d = 6578/9.8 m/s2 <br>
             aceleracion de gravedad = g = 980665 m/s2
-            
+
       </section>
       <section id="formulas">
             <h2>Fórmulas</h2>
@@ -52,9 +51,14 @@
             <h2>Solución</h2>
             <p>La densidad es:<br>
              d=671.2 kg/m3</p>
+
+            <?php
+                 print "<h1> resultado: densidad = ".calcula_densidad(). " kg/m3</h1>";
+            ?>
+
              <button onclick="solucion()">Presiona para calcular</button>
       </section>
-      
+
       <section id="resultado"></section>
     </section>
     <footer id="gridPie">
@@ -62,3 +66,4 @@
     </footer>
 </body>
 </html>
+
