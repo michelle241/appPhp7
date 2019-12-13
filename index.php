@@ -2,68 +2,66 @@
 <html lang="es-mx">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Science Technology Engineerig & Mathematics</title>
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>IntroPhp7 Grupo XA</title>
+    <link rel="stylesheet" href="css/estilos.css"/>
     <link rel="stylesheet" href="css/menu.css"/>
     <link rel="stylesheet" href="css/problema.css"/>
     <link href="https://fonts.googleapis.com/css?family=Rambla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <?php
-        function solucion(){
-        $masa=6578;
-        $gravedad=9.8;
-        $densidad=$masa/$gravedad;
-
-        return $densidad;
-        }
-    ?>
 </head>
 <body>
-    <section id="contenedor">
-    <header id="gridHeader">
-    <h1>Science Technology Engineerig & Mathematics</h1>
-    <h2>Resolver problemas de Ciencia e Ingeniería con JS</h2>
-    <h2>Nombre: Michelle Roque López  No. de control: 17091152</h2>
-    <img src="fotoSelfie.jpg" alt="su foto">
+   <section class="wrapper">
+    <header>
+      <h1 class="logo"><a href="index.php">IntroPHP7</a></h1>
+      <nav>
+      <ul>
+        <li><a href="index.php" class="current">Inicio</a></li>
+        <li><a href="#">Otros Ejemplos Php7</a></li>
+      </ul>
+      </nav>
     </header>
-    </section>
-    <section id="problema"  class="gridProblema">
-      <section id=descripcion>
-            <h2>Problema: Cálcular la densidad</h2>
-            <p>Descripción:</p>
-            <p>¿Cual es la densidad de un aceite cuyo peso especifico es de 6578 N/m3? <br>
-      </section>
-      <section id="datos">
-            <h2>Datos:</h2>
-            masa = m = 6578 N/m**3 <br>
-            densidad = d = 6578/9.8 m/s2 <br>
-            aceleracion de gravedad = g = 980665 m/s2
-
-      </section>
-      <section id="formulas">
-            <h2>Fórmulas</h2>
-            d=masa/volumen
-      </section>
-      <section id="solucion">
-            <h2>Solución</h2>
-            <p>La densidad es:<br>
-             d=671.2 kg/m3</p>
-
-            <?php
-                 print "<h1> resultado: densidad = ".calcula_densidad(). " kg/m3</h1>";
-            ?>
-
-             <button onclick="solucion()">Presiona para calcular</button>
-      </section>
-
-      <section id="resultado"></section>
-    </section>
-    <footer id="gridPie">
-        <p>Solution Science Problems. 2019 Creative Commons 3.0</p>
+<section id="contenedor">
+<section  class="problema">
+  <h2>Problema: Cálcular la densidad</h2>
+  <p>Descripción:</p>
+  <p>la masa es 6578 N/m**3 y su densidad es 6578/9.8 m/s2 y la gravedad es 980665 m/s2 <br>
+ ¿Cual es la densidad de un aceite cuyo peso especifico es de 6578 N/m3? </p>
+</section>
+<section class="formulas">
+<h2>Fórmulas</h2>
+    Densidad = Masa/Volumen<br>
+    Volumen= 9.8
+</section>
+<section class="datos">
+<h2>Datos:</h2>
+   m= 6578 N/m. <br>
+   gravedad= 9.8 <br>
+</section>
+<section class="calculos">
+<h2>Solución</h2>
+   <p>a)La densidad es:<br>
+    densidad = 671.2 kg/m3 (m) <br>
+    gravedad= 6578/9.8 </p>
+</section>
+<?php
+     function calcula_densidad(){
+        $gravedad=9.8;
+        $masa= 6578;
+        $densidad= $masa/$gravedad;
+        return $densidad;
+     }
+?>
+<section class="resultado">
+<h2>Resultado:</h2>
+<div id="resultadoA"></div>
+<?php
+ print "<h1> resultado: densidad = ".calcula_densidad(). " kg/(metro cubico)</h1>";
+?>
+</section>
+</section>
+    <footer class="pie">
+     Creative Commons versión 3.0 SciSoft 2019
     </footer>
+   </section>
 </body>
 </html>
-
