@@ -46,7 +46,7 @@
 <?php
      function calcula_densidad(){
         $gravedad=9.8;
-        $masa= 6578;
+        $masa= 3578;
         $densidad= $masa/$gravedad;
         return $densidad;
      }
